@@ -1,9 +1,10 @@
 import React from 'react';
+import './POPOSList.css';
 import POPOSSpace from './POPOSSpace';
 
 function POPOSList() {
   return (
-    <div>
+    <div className="POPOSList">
       <POPOSSpace
         name="50 California Street"
         address="50 California St."
