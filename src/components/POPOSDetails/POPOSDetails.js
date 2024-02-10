@@ -3,6 +3,8 @@ import { useParams } from 'react-router';
 import './POPOSDetails.css';
 import data from '../../sfpopos-data.js';
 
+import POPOSFeatureList from '../POPOSFeatureList/POPOSFeatureList';
+
 function POPOSDetails(props) {
   const params = useParams();
   const { id } = params; // location index
@@ -21,9 +23,10 @@ function POPOSDetails(props) {
         <h1 className="POPOSDetails-title">{title}</h1>
         <p className="POPOSDetails-desc">{desc}</p>
         <p className="POPOSDetails-hours">{hours}</p>
-        <p className="POPOSDetails-features">{features.join(' ')}</p>
+        <POPOSFeatureList features={features} />
         <p className="POPOSDetails-geo">
-          {geo.lat} {geo.lon}
+          {' '}
+          GEO: {geo.lat} {geo.lon}
         </p>
       </div>
     </div>
