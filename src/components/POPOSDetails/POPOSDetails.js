@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import './POPOSDetails.css';
-import data from '../../sfpopos-data.json';
+import data from '../../sfpopos-data.js';
 
 function POPOSDetails(props) {
   const params = useParams();
