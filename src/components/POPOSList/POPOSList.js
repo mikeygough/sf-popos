@@ -1,7 +1,7 @@
 import React from 'react';
-import data from './sfpopos-data.json';
+import data from '../../sfpopos-data.json';
 import './POPOSList.css';
-import POPOSSpace from './POPOSSpace';
+import POPOSSpace from '../POPOSSpace/POPOSSpace';
 
 function POPOSList() {
   // deconstruct as a parameter
