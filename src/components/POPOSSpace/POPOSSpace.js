@@ -14,11 +14,13 @@ function POPOSSpace(props) {
           alt="50 California St."
         />
       </Link>
-      <h1>
+      <h1 className="POPOSSpace-title">
         <Link to={`/details/${id}`}>{name}</Link>
       </h1>
-      <div>{address}</div>
-      <div>{hours}</div>
+      <div className="POPOSSpace-info">
+        <div>{address}</div>
+        <div>{hours}</div>
+      </div>
     </div>
   );
 }
