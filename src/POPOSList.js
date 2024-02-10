@@ -5,9 +5,10 @@ import POPOSSpace from './POPOSSpace';
 
 function POPOSList() {
   // deconstruct as a parameter
-  const spaces = data.map(({ title, address, images, hours }) => {
+  const spaces = data.map(({ title, address, images, hours }, i) => {
     return (
       <POPOSSpace
+        id={i}
         key={title}
         name={title}
         address={address}
