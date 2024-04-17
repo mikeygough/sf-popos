@@ -1,31 +1,40 @@
 .POPOSDetails {
   display: flex;
-  flex-direction: row-reverse;
-  width: 960px;
+  flex-direction: column;
+  width: 90%;
   margin: auto;
 }
 
 .POPOSDetails .POPOSDetails-info {
-  flex: 1;
   text-align: left;
   padding: 0 1em;
+  margin-bottom: 1rem;
 }
 
 .POPOSDetails .POPOSDetails-title {
   font-size: 2em;
   margin: 0;
-}
-
-.POPOSDetails .POPOSDetails-image {
-  flex: 2;
+  text-align: center;
 }
 
 .POPOSDetails .POPOSDetails-image img {
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .POPOSDetails .POPOSDetails-hours {
   font-size: 1.5em;
+}
+
+.POPOSDetails-map {
+  width: 90%;
+  height: 500px;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Smaller screens and tablets */

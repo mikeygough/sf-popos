@@ -40,7 +40,7 @@ function POPOSList() {
       <div
         className="POPOSList-Search"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/images/SF-Background-Image.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/SF-Background-Image.png)`,
         }}
       >
         <h2>Outside. Restrooms. Coffee. Fi-Di. Wi-Fi.</h2>

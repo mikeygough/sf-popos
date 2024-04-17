@@ -1,8 +1,9 @@
 import React from 'react';
+import './About.css';
 
 function About() {
   return (
-    <div>
+    <div className="About">
       <h1>About SFPOPOS</h1>
       <p>
         POPOS are publicly accessible spaces in forms of plazas,
