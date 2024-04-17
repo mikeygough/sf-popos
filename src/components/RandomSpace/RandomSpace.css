@@ -1,0 +1,16 @@
+.RandomSpace {
+  margin-left: auto;
+}
+
+.RandomSpace > button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: rgba(255, 255, 255, 0.835);
+  font-weight: bold;
+  text-decoration: none;
+}

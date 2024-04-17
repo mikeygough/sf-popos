@@ -1,13 +1,20 @@
 .Title {
   box-sizing: border-box;
   width: 100%;
-  /* display: flex; */
-  justify-content: center;
-  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  /* align-items: baseline; */
   padding: 1em;
   margin-bottom: 2em;
   background-color: #38bdf8;
   color: #fff;
+}
+
+.Title > div {
+  order: 3;
+  margin-left: auto;
 }
 
 .Title a {
@@ -34,5 +41,6 @@
 
 .Title-Nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 1rem;
 }
