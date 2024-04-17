@@ -7,12 +7,12 @@ import RandomSpace from '../RandomSpace/RandomSpace';
 function Title() {
   return (
     <div className="Title">
-      <h1>SFPOPOS</h1>
+      <h1>Privately Owned Public Spaces</h1>
       <div className="Title-Subtitle">
-        <h2>San Francisco Privately Owned Public Open Spaces</h2>
+        <h2>San Francisco</h2>
       </div>
 
-      <div>
+      <div className="Title-Nav">
         <NavLink
           className={({ isActive }) =>
             isActive ? 'nav-link-active' : 'nav-link'
