@@ -22,28 +22,44 @@ function POPOSList() {
     })
     .map(({ id, title, address, images, hours }) => {
       return (
-        <POPOSSpace
-          id={id}
-          key={title}
-          name={title}
-          address={address}
-          image={images[0]}
-          hours={hours}
-        />
+        <>
+          <POPOSSpace
+            id={id}
+            key={title}
+            name={title}
+            address={address}
+            image={images[0]}
+            hours={hours}
+          />
+        </>
       );
     });
 
   return (
     <div className="POPOSList">
-      <form>
-        <input
-          value={query}
-          placeholder="search"
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button type="submit">Submit</button>
-      </form>
-      {spaces}
+      <div
+        className="POPOSList-Search"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/images/SF-Background-Image.jpg)`,
+        }}
+      >
+        <h2>Outside. Restrooms. Coffee. Fi-Di. Wi-Fi.</h2>
+        <form>
+          <input
+            value={query}
+            placeholder="Enter a neighborhood, amenity, or address..."
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button type="submit">
+            <img
+              alt="magnifying glass search icon"
+              src={`${process.env.PUBLIC_URL}/images/search.svg`}
+            />
+          </button>
+        </form>
+      </div>
+
+      <div className="POPOSList-Spaces">{spaces}</div>
     </div>
   );
 }

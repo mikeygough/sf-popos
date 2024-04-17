@@ -1,4 +1,4 @@
-.POPOSList {
+.POPOSList-Spaces {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
@@ -9,21 +9,37 @@
 
 /* Smaller screens and tablets */
 @media only screen and (max-width: 960px) {
-  .POPOSList {
+  .POPOSList-Spaces {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Small screens mobile */
 @media only screen and (max-width: 700px) {
-  .POPOSList {
+  .POPOSList-Spaces {
     grid-template-columns: 1fr;
   }
 }
 
+.POPOSList-Search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  height: 300px;
+  background-size: cover;
+}
+
+.POPOSList-Search h2 {
+  color: #fff;
+  margin: 5rem 0 2rem 0;
+  letter-spacing: 0.25rem;
+}
+
 .POPOSList form {
   display: flex;
-  align-items: flex-start;
+  width: 90%;
 }
 
 .POPOSList form input,
