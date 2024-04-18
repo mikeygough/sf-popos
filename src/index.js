@@ -11,6 +11,7 @@ import reportWebVitals from './reportWebVitals';
 import POPOSList from './components/POPOSList/POPOSList';
 import About from './components/About/About';
 import POPOSDetails from './components/POPOSDetails/POPOSDetails';
+import BigMap from './components/BigMap/BigMap';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
         <Route path="/" element={<POPOSList />} />
         <Route path="about" element={<About />} />
         <Route path="/details/:id" element={<POPOSDetails />} />
+        <Route path="/map" element={<BigMap />} />
       </Route>
     </Routes>
   </Router>

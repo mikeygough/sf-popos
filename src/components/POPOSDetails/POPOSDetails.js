@@ -6,6 +6,7 @@ import {
   APIProvider,
   Map,
   AdvancedMarker,
+  Pin,
 } from '@vis.gl/react-google-maps';
 
 import POPOSFeatureList from '../POPOSFeatureList/POPOSFeatureList';
@@ -37,13 +38,17 @@ function POPOSDetails(props) {
           apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
         >
           <Map
-            mapId={1}
+            mapId={id}
             zoom={15}
             center={{ lat: geo.lat, lng: geo.lon }}
           >
-            <AdvancedMarker
-              position={{ lat: geo.lat, lng: geo.lon }}
-            />
+            <AdvancedMarker position={{ lat: geo.lat, lng: geo.lon }}>
+              <Pin
+                background={'#075985'}
+                glyphColor={'#000'}
+                borderColor={'#000'}
+              />
+            </AdvancedMarker>
           </Map>
         </APIProvider>
       </div>
