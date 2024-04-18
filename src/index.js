@@ -11,7 +11,8 @@ import reportWebVitals from './reportWebVitals';
 import POPOSList from './components/POPOSList/POPOSList';
 import About from './components/About/About';
 import POPOSDetails from './components/POPOSDetails/POPOSDetails';
-import BigMap from './components/BigMap/BigMap';
+import MapComponent from './components/MapComponent/MapComponent';
+import data from './sfpopos-data.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,13 +22,13 @@ root.render(
         <Route path="/" element={<POPOSList />} />
         <Route path="about" element={<About />} />
         <Route path="/details/:id" element={<POPOSDetails />} />
-        <Route path="/map" element={<BigMap />} />
+        <Route
+          path="/map"
+          element={<MapComponent markers={data} />}
+        />
       </Route>
     </Routes>
   </Router>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

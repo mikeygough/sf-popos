@@ -2,19 +2,13 @@ import React from 'react';
 import { useParams } from 'react-router';
 import './POPOSDetails.css';
 import data from '../../sfpopos-data.js';
-import {
-  APIProvider,
-  Map,
-  AdvancedMarker,
-  Pin,
-} from '@vis.gl/react-google-maps';
-
+import MapComponent from '../MapComponent/MapComponent';
 import POPOSFeatureList from '../POPOSFeatureList/POPOSFeatureList';
 
 function POPOSDetails(props) {
   const params = useParams();
-  const { id } = params; // location index
-  const { images, title, desc, hours, features, geo } = data[id];
+  const { id } = params;
+  const { images, title, desc, hours, features } = data[id];
 
   return (
     <div className="POPOSDetails">
@@ -34,23 +28,7 @@ function POPOSDetails(props) {
 
       <div className="POPOSDetails-map">
         <h1>Map</h1>
-        <APIProvider
-          apiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
-        >
-          <Map
-            mapId={id}
-            zoom={15}
-            center={{ lat: geo.lat, lng: geo.lon }}
-          >
-            <AdvancedMarker position={{ lat: geo.lat, lng: geo.lon }}>
-              <Pin
-                background={'#075985'}
-                glyphColor={'#000'}
-                borderColor={'#000'}
-              />
-            </AdvancedMarker>
-          </Map>
-        </APIProvider>
+        <MapComponent markers={data[id]} />
       </div>
     </div>
   );
